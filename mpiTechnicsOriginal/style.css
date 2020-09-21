@@ -1,0 +1,756 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+html,
+body {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      overflow-x: hidden;
+}
+
+.scroll{
+    overflow-y: hidden;
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+}
+
+.banner .logo-top{
+    width: 370px;
+}
+
+.mobileNav{
+    display: none; 
+    background-color: rgb(240, 196, 0); 
+    justify-content: center; 
+    position: absolute;
+    z-index: 1000; 
+    right: -1300px;
+    transition: .8s;
+    height: 100%;
+    width: 100%;
+}
+
+.showMobile{
+    right: 0;
+}
+
+.mobileNav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.mobileNav ul li{
+    margin: 35px 0;
+}
+
+.mobileNav ul li a{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(58, 55, 54);
+}
+
+.mobileNav ul li a:hover{
+    color: #000;
+}
+
+.contact-mobile{
+    align-self: center;
+    font-size: 25px;
+    background-color: rgb(216, 50, 50);
+    border-radius: 50px;
+    padding: 8px 26px;
+    transition: .4s;
+    color: #000;
+}
+
+.fa-phone.mobile{
+    transform: rotate(90deg);
+    font-size: 25px;
+    margin-right: 6px;
+}
+
+.contact-mobile:hover{
+    background-color: rgb(221, 91, 91);
+}
+
+.contact-mobile:hover .fa-phone{
+    animation: fa-phone .8s;
+}
+
+.computerNav{
+    background-color: rgb(240, 196, 0);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 0px 2px 7px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 7px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 7px -1px rgba(0,0,0,0.75);
+ }
+ 
+ .computerNav ul{
+    display: flex;
+    align-items: center;
+ }
+ 
+ .computerNav ul li a{
+    display: inline-block;
+    padding: 21px 15px;
+    margin: 0 8px;
+    font-weight: bold;
+    color: rgb(58, 55, 54);
+    font-size: 20px;
+}
+
+.computerNav ul li a:hover{
+    color: black;
+    transition: .7s;
+}
+
+.contact{
+    font-size: 21px;
+    background-color: rgb(216, 50, 50);
+    border-radius: 50px;
+    padding: 9px 25px;
+    transition: .4s;
+    color: black;
+}
+
+.contact:hover{
+    background-color: rgb(221, 91, 91);
+}
+
+.contact:hover .fa-phone{
+    animation: fa-phone .8s;
+}
+
+.fa-phone{
+    transform: rotate(90deg);
+    font-size: 22px;
+    margin-right: 6px;
+}
+
+header{
+    height: 74.6vh;
+    background-size: cover;
+    background-attachment: fixed;  
+    animation: slider 20s infinite;
+    position: relative;
+}
+
+.wrap{
+    width: 1000px;
+    height: 200px;
+    position: absolute;
+    top: 2%;
+    left: 1.5%;
+    animation: napis 1.1s;
+}
+
+h1{
+    font-size: 85px;
+    cursor: default;
+    text-shadow: 2px 2px 2px rgba(228, 159, 0, 0.15);   
+}
+
+.arrow {
+    border: none;
+    background-color: rgb(216, 50, 50);
+    border-radius: 50%;
+    position: absolute;
+    left: 1.5%;
+    top: 84%;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+button:focus{
+    outline: none;
+}
+
+.hideArrow{
+    display: none;
+}
+
+.arrow .fa-angle-down {
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 45px;
+    text-shadow: 0px 20px #fff, 0px -20px #fff;
+    animation: arrow 1s linear infinite;
+}
+
+.arrow:hover {
+    box-shadow: -1px 1px 20px 2px rgb(221, 91, 91); 
+}
+
+.arrow:hover .fa-angle-down {
+    animation: arrow .7s linear infinite;
+}
+
+.square{
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    background-color: #fff;
+    transform: rotate(45deg);
+    bottom: -520px;
+    left: -390px;
+    transition: .5s;
+}
+
+.arrow:hover+.square{
+    bottom: -420px;
+    left: -290px;  
+}
+
+.box-3{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    width: 1300px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.box-3Appear{
+    animation: appear 2s .2s;
+}
+
+.box
+{
+    width: 350px;
+	padding: 40px;
+	background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    border-radius: 4px;
+    text-align: center;
+    transition: .4s;
+}
+.icon::before
+{
+	content: '';
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(255,255,255,.2);
+	z-index: 2;
+}
+.box .icon
+{
+	position: relative;
+	width: 80px;
+	height: 80px;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	border-radius: 50%;
+	font-size: 40px; 
+	font-weight: 700;
+	transition: 1s;  
+}
+
+.box:hover{
+    transform: scale(1.1);
+}
+
+.box .content h3
+{
+	font-size: 21px;
+	margin: 10px 0;
+}
+
+.first .icon{
+    background: rgb(243, 192, 51);
+}
+
+.second .icon{
+    background: rgb(170, 211, 155);
+}
+
+.third .icon{
+    background: rgb(132, 208, 244);	
+}
+
+.sticks{
+    width: 1300px;
+    position: absolute;
+    z-index: -1;
+    right: 300px;
+}
+
+footer{
+    color: white;
+    background-color: rgb(58, 55, 54);
+    display: flex;
+    height: 150px;
+    margin-top: 870px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .rights{
+    margin-bottom: 3px;
+    font-size: 20px;
+}
+
+.fa-wrench{
+    margin-left: 6px;
+    color: rgb(240, 196, 0);
+}
+
+/*Animations*/
+
+@keyframes fa-phone{
+    0%{
+        transform: rotate(90deg);
+    }
+    25%{
+        transform: rotate(190deg);
+    }
+    50%{
+        transform: rotate(90deg);
+    }
+    75%{
+        transform: rotate(190deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes napis{
+    0%{
+        top: 10%;
+        left: 1.5%;
+        opacity: 0;
+    }
+    100%{
+        top: 2%;
+        left: 1.5%;
+        opacity: 1;
+    }
+}
+
+@keyframes arrow {
+    0% {
+        left: 50%;
+        top: -50%;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        left: 50%;
+        top: 130%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes slider{
+    0%,100%{
+       background-image: url(koparka.jpg);
+       background-position: bottom;
+      
+    }
+    25%{
+        background-image: url(koparka2.jpg);
+        background-position: center;
+        
+    }
+    50%{
+        background-image: url(koparka.jpg);
+       
+    }
+    75%{
+        background-image: url(koparka2.jpg);
+       
+    }
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* media */
+
+@media (max-width: 1700px){
+    .wrap{
+        width: 900px;
+        height: 200px;
+        position: absolute;
+        top: 2%;
+        left: 1.5%;
+        animation: napis 1.1s;
+    }
+    
+    h1{
+        font-size: 75px;
+        text-shadow: 2px 2px 2px rgba(228, 159, 0, 0.15);   
+    }
+}
+
+@media (max-width: 1400px){
+    .wrap{
+        width: 700px;
+        height: 300px;
+        position: absolute;
+        top: 2%;
+        left: 1.5%;
+        animation: napis 1.1s;
+    }
+    
+    h1{
+        font-size: 70px;
+        text-shadow: 2px 2px 2px rgba(228, 159, 0, 0.15);   
+    }
+}
+
+@media (max-width: 1300px){
+    .computerNav ul li a{
+        padding: 21px 10px;
+        font-size: 18.5px;
+    }
+
+    .contact{
+        font-size: 19px;
+        cursor: pointer;
+        border: none;
+        background-color: rgb(216, 50, 50);
+        border-radius: 50px;
+        padding: 7px 20px;
+        transition: .4s;
+    }
+
+    .fa-phone{
+        transform: rotate(90deg);
+        font-size: 20px;
+        margin-right: 6px;
+    }
+
+    .box-3{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .box{
+        width: 350px;
+        height: 350px;
+        margin-bottom: 50px;
+    }
+
+    footer{
+        margin-top: 1250px;
+    }
+}
+
+@media (max-width: 1150px){
+    nav{
+        height: 65px;
+    }
+
+    .computerNav ul{
+        display: none;
+     }
+     
+    .mobileNav{
+         display: flex;
+     }
+
+     .hamburger{
+        position: absolute;
+        right: 3%;
+        display: block;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+    }
+
+    .hamburger span{
+        display: block;
+        width: 35px;
+        height: 6px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: #000;
+        transition: .5s;
+        box-shadow: 0 2px 2px rgba(0,0,0,.2);
+        border-radius: 1px;
+    }
+
+    .hamburger span:nth-child(1){
+        transform: translate(-50%,-50%) translateY(-15px);
+    }
+
+    .hamburger span:nth-child(4){
+        transform: translate(-50%,-50%) translateY(15px);
+    }
+
+    .hamburger.active span:nth-child(1){
+        transform: translate(-50%,-50%) translateY(-25px);
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(4){
+        transform: translate(-50%,-50%) translateY(25px);
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(2){
+        transform: translate(-50%,-50%) rotate(45deg);
+        transition-delay: .2s;
+    }
+
+    .hamburger.active span:nth-child(3){
+        transform: translate(-50%,-50%) rotate(-45deg);
+        transition-delay: .2s;
+    }
+}
+
+@media (max-width: 1000px){
+    .wrap{
+        width: 700px;
+        height: 300px;
+        position: absolute;
+        top: 2%;
+        left: 1.5%;
+        animation: napis 1.1s;
+    }
+    
+    h1{
+        font-size: 65px;
+        text-shadow: 2px 2px 2px rgba(228, 159, 0, 0.15);   
+    }
+
+    .box:hover{
+        transform: none;
+    }
+}
+
+@media (max-width: 850px){
+    .wrap{
+        width: 600px;
+        height: 300px;
+        position: absolute;
+        top: 2%;
+        left: 1.5%;
+        animation: napis 1.1s;
+    }
+    
+    h1{
+        font-size: 60px;
+        text-shadow: 2px 2px 2px rgba(228, 159, 0, 0.15);   
+    }
+}
+
+@media (max-width: 750px){
+    .wrap{
+        width: 500px;
+        height: 300px;
+        position: absolute;
+        top: 2%;
+        left: 1.5%;
+        animation: napis 1.1s;
+    }
+    
+    h1{
+        font-size: 50px;
+        text-shadow: 2px 2px 2px rgba(228, 159, 0, 0.15);   
+    }
+
+    .arrow{
+        left: 50%;
+        top: 68%;
+        transform: translateX(-50%);
+    }
+
+    .square{
+        display: none;
+    }
+} 
+
+@media (max-width: 500px){
+    .banner .logo-top{
+        width: 330px;
+    }
+    
+    header{
+        animation: none;
+        background-image: url('koparka.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 75.9vh;
+    }
+
+    .wrap{
+        width: 350px;
+        height: 350px;
+        position: absolute;
+        top: 2%;
+        left: 1.5%;
+        animation: napis 1.1s;
+    }
+    
+    h1{
+        font-size: 45px;
+        text-shadow: 2px 2px 2px rgba(228, 159, 0, 0.15);   
+    }
+}
+
+@media (max-width: 475px){
+    .mobileNav ul li{
+        margin: 23px 0;
+     }
+     
+     .mobileNav ul li a{
+         font-size: 22px;
+         font-weight: bold;
+         color: rgb(58, 55, 54);
+     }
+
+     .contact-mobile{
+        align-self: center;
+        font-size: 25px;
+        cursor: pointer;
+        border: none;
+        background-color: rgb(216, 50, 50);
+        border-radius: 50px;
+        padding: 5px 22px;
+        transition: .4s;
+    }
+    
+    .fa-phone.mobile{
+        transform: rotate(90deg);
+        font-size: 25px;
+        margin-right: 6px;
+    }
+}
+
+@media (max-width: 410px){
+    .banner .logo-top{
+        width: 300px;
+    }
+    
+    header{
+        height: 77.4vh;
+    }
+
+    .wrap{
+        width: 350px;
+        height: 350px;
+        position: absolute;
+        top: 2%;
+        left: 1.5%;
+        animation: napis 1.1s;
+    }
+    
+    h1{
+        font-size: 40px;
+        text-shadow: 2px 2px 2px rgba(228, 159, 0, 0.15);   
+    }
+}
+
+@media (max-width: 350px){
+    .wrap{
+        width: 300px;
+        height: 350px;
+        position: absolute;
+        top: 2%;
+        left: 1.5%;
+        animation: napis 1.1s;
+    }
+    
+    h1{
+        font-size: 35px;
+        text-shadow: 2px 2px 2px rgba(228, 159, 0, 0.15);   
+    }
+
+    footer p{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 320px){
+    .mobileNav ul li{
+        margin: 25px 0;
+     }
+     
+     .mobileNav ul li a{
+         font-size: 20px;
+         font-weight: bold;
+         color: rgb(58, 55, 54);
+     }
+
+     .contact-mobile{
+        align-self: center;
+        font-size: 22px;
+        cursor: pointer;
+        border: none;
+        background-color: rgb(216, 50, 50);
+        border-radius: 50px;
+        padding: 5px 22px;
+        transition: .4s;
+    }
+    
+    .fa-phone.mobile{
+        transform: rotate(90deg);
+        font-size: 22px;
+        margin-right: 6px;
+    }
+
+    footer p{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 290px){
+    .wrap{
+        width: 250px;
+        height: 350px;
+        position: absolute;
+        top: 2%;
+        left: 1.5%;
+        animation: napis 1.1s;
+    }
+    
+    h1{
+        font-size: 30px;
+        text-shadow: 2px 2px 2px rgba(228, 159, 0, 0.15);   
+    }
+}
+
+
+
+
+
